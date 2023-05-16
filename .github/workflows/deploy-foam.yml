@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
+          cache-dependency-path: '_layouts/package-lock.json'
 
       - name: Install website dependencies
         run: npm install
