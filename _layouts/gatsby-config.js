@@ -1,7 +1,7 @@
 module.exports = {
-    pathPrefix: `/foam-gatsby-template`,
+    pathPrefix: `/knowledge-base`,
     siteMetadata: {
-      title: `Foam`,
+      title: `Smithed Knowledge Base`,
     },
     plugins: [
       {

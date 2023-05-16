@@ -7,8 +7,11 @@ jobs:
   deploy-website:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'npm'
 
       - name: Install website dependencies
         run: npm install
@@ -19,7 +22,7 @@ jobs:
 
       - name: Deploy to the gh-pages branch
         # only deploy when the main branch has some changes
-        if: github.ref == 'refs/heads/master'
+        if: github.ref == 'refs/heads/main'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
