@@ -12,14 +12,11 @@ jobs:
         with:
           node-version: 16
           cache: 'npm'
-          cache-dependency-path: '_layouts/package-lock.json'
 
       - name: Install website dependencies
         run: npm install
-        working-directory: _layouts
       - name: Build website
         run: npm run build -- --prefix-paths
-        working-directory: _layouts
 
       - name: Deploy to the gh-pages branch
         # only deploy when the main branch has some changes
@@ -27,4 +24,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./_layouts/public
+          publish_dir: ./public

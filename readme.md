@@ -1,6 +1,4 @@
-<img src="attachments/foam-icon.png" width=100 align="left">
-
-# Foam
+# Smithed KnowledgeBase
 
 **👋 Welcome to your new Foam Knowledge Base!**
 

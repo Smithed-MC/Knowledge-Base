@@ -1,5 +1,5 @@
 module.exports = {
-    pathPrefix: `/knowledge-base`,
+    pathPrefix: `/Knowledge-Base`,
     siteMetadata: {
       title: `Smithed Knowledge Base`,
     },
